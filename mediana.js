@@ -9,9 +9,8 @@ function calcularMedia(lista){
     return promedioLista;
 }
 
-
-const lista1 = [100, 200, 500, 400000];
-const mitadLista1 = parseInt(lista1.length / 2);
+/*Funcion que ve si el numero que introducimos es par o impar
+despues lo cambiaremos por la longitud del array en la funcion calculaMediana.*/
 
 
 function esPar (numerito){
@@ -22,17 +21,27 @@ function esPar (numerito){
     }
 }
 
-let mediana;
 
+/*Funcion que recibe una lista ded x elementos, definimos al inicio la mitad de la lista (que sera la mediana si la lista es impar), evalua si la longitud del array es par, si es par llama a la funcion calcularMedia y esta recibe como parametros el elemento 1 (que es la mitad de la lista menos 1) y el elemento 2 que es la mitad de la lista, para despues hacer el promedio de las dos e imprimir la mediana.
+*/
 
-if (esPar(lista1.length)) {
-    const elemento1 = lista1[mitadLista1 - 1];
-    const elemento2 = lista1[mitadLista1];
+function calculaMediana(lista){
+    lista.sort(function(a, b){return a - b});
+    const mitadLista = parseInt(lista.length / 2);
 
-    const promedioPar = calcularMedia([elemento1, elemento2]);
+    if (esPar(lista.length)) {
+        const elemento1 = lista[mitadLista - 1];
+        const elemento2 = lista[mitadLista];
     
-    mediana = promedioPar;
+        const promedioPar = calcularMedia([elemento1, elemento2]);
+        
+        mediana = promedioPar;
+        return mediana;
+        
+    } else{
+        mediana = lista[mitadLista];
+        return mediana;
+    }
     
-} else{
-    mediana = lista1[mitadLista1];
 }
+
