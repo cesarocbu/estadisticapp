@@ -1,2 +1,2 @@
 # estadisticapp
-Calcula ma ledia, moda y mediana! Ejercicio con JS
+Calcula la media, moda y mediana! Ejercicio con JS
