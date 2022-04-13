@@ -1,5 +1,5 @@
 function calcularMedia(lista){
-    
+
     const sumaLista = lista.reduce(
         function (valorAcumulado = 0, nuevoElemento){
             return valorAcumulado + nuevoElemento;
@@ -32,16 +32,16 @@ function calculaMediana(lista){
     if (esPar(lista.length)) {
         const elemento1 = lista[mitadLista - 1];
         const elemento2 = lista[mitadLista];
-    
+
         const promedioPar = calcularMedia([elemento1, elemento2]);
-        
+
         mediana = promedioPar;
         return mediana;
-        
+
     } else{
         mediana = lista[mitadLista];
         return mediana;
     }
-    
+
 }
 
